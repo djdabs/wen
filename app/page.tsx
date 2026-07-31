@@ -45,7 +45,7 @@ export default function Home() {
       </header>
 
       {/* Hero */}
-      <main className="relative z-[2] mx-auto grid min-h-svh max-w-6xl items-end px-5 pt-24 sm:px-10 max-[860px]:items-start">
+      <main className="relative z-[2] mx-auto grid w-full min-h-svh max-w-6xl items-end px-5 pt-24 sm:px-10 max-[860px]:items-start">
         <div className="grid grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-center gap-x-14 gap-y-10 lg:gap-x-20 max-[860px]:grid-cols-1">
           <div className="min-w-0 max-[860px]:order-2">
             <span className="mb-7 inline-flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.22em] text-dream">
@@ -117,20 +117,6 @@ export default function Home() {
           click the sky to make a wish ✦
         </p>
       </main>
-
-      {/* Footer */}
-      <footer className="relative z-[2] border-t border-line bg-void/60">
-        <div className="mx-auto max-w-6xl px-5 py-8 sm:px-10">
-          <p className="text-[13px] leading-relaxed text-muted/75">
-            $WEN is a meme coin with no intrinsic value and no promises beyond
-            the sky itself.{" "}
-            <em className="font-serif text-muted">
-              Dreams are not financial advice.
-            </em>{" "}
-            © 2026 the sky-watchers.
-          </p>
-        </div>
-      </footer>
     </>
   );
 }

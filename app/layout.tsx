@@ -28,7 +28,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      {/* Not a flex column: `mx-auto` on a flex item shrink-wraps it to its
+          content instead of filling the width, which drifts the hero sideways. */}
+      <body className="min-h-full">{children}</body>
     </html>
   );
 }
