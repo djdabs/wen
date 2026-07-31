@@ -671,10 +671,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:16.2.12, @next/swc-darwin-arm64@npm:^16.2.12":
+"@next/swc-darwin-arm64@npm:16.2.12":
   version: 16.2.12
   resolution: "@next/swc-darwin-arm64@npm:16.2.12"
-  checksum: 10c0/04b54a525d11f986691ee7d5eeee6f7b9c1d0fd0d11eb17c68798fc3f4c1c79db941d0e4adb753eff84772281fdb3b26fcd797d148639dd9977c6df9ea92c1b0
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
@@ -4408,7 +4407,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:."
   dependencies:
-    "@next/swc-darwin-arm64": "npm:^16.2.12"
     "@tailwindcss/postcss": "npm:^4"
     "@types/node": "npm:^20"
     "@types/react": "npm:^19"

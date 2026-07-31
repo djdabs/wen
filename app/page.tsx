@@ -51,26 +51,28 @@ export default function Home() {
       {/* Hero */}
       <main className="relative z-[2] mx-auto grid min-h-svh max-w-6xl items-end px-5 pt-24 sm:px-10 max-[860px]:items-start">
         <div className="grid grid-cols-[minmax(0,460px)_1fr] items-end gap-6 max-[860px]:grid-cols-1">
-          <div className="pb-12 md:pb-20 max-[860px]:order-2 max-[860px]:pb-8">
+          <div className="pb-10 md:pb-14 max-[860px]:order-2 max-[860px]:pb-8">
             <span className="mb-7 inline-flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.22em] text-dream">
               <span className="h-[7px] w-[7px] rounded-full bg-dream shadow-[0_0_12px_var(--dream)]" />
               $WEN &nbsp;·&nbsp; live on Solana
             </span>
 
-            <h1 className="-ml-[0.04em] bg-gradient-to-b from-starlight from-30% to-starlight/30 bg-clip-text text-[clamp(88px,17vw,240px)] font-black leading-[0.82] tracking-[-0.055em] text-transparent">
+            {/* w-max so the background box grows with the type — bg-clip-text
+                would otherwise crop the glyphs at the column edge. */}
+            <h1 className="-ml-[0.04em] w-max bg-gradient-to-b from-starlight from-30% to-starlight/30 bg-clip-text text-[clamp(76px,14vw,204px)] font-black leading-[0.82] tracking-[-0.055em] text-transparent">
               WEN
-              <span className="bg-gradient-to-br from-dream to-nebula bg-clip-text">
+              <span className="bg-gradient-to-br from-dream to-nebula bg-clip-text text-transparent">
                 ?
               </span>
             </h1>
 
-            <div className="mb-9 mt-8 font-serif text-[clamp(24px,3vw,36px)] italic leading-[1.32]">
+            <div className="mb-8 mt-6 font-serif text-[clamp(22px,2.7vw,32px)] italic leading-[1.3]">
               {["moon", "love", "millions"].map((wish) => (
                 <p key={wish} className="text-starlight/85">
                   <span className="text-dream">Wen</span> {wish}
                 </p>
               ))}
-              <p className="mt-4 border-t border-line pt-4 text-starlight">
+              <p className="mt-3.5 border-t border-line pt-3.5 text-starlight">
                 It&apos;s not <em className="text-muted">if</em>, it&apos;s{" "}
                 <span className="bg-gradient-to-r from-dream to-nebula bg-clip-text text-transparent">
                   wen
@@ -128,7 +130,7 @@ export default function Home() {
               width={1035}
               height={1187}
               priority
-              className="pepe-fade relative h-[min(62svh,620px)] w-auto max-w-full drop-shadow-[0_0_60px_rgba(20,241,149,0.12)] max-[860px]:h-[min(38svh,320px)]"
+              className="pepe-fade relative h-[min(56svh,560px)] w-auto max-w-full drop-shadow-[0_0_60px_rgba(20,241,149,0.12)] max-[860px]:h-[min(36svh,300px)]"
             />
           </figure>
         </div>
