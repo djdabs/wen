@@ -1,25 +1,13 @@
 import Image from "next/image";
 import Starfield from "./components/Starfield";
 import CopyCA from "./components/CopyCA";
-import {
-  DexscreenerIcon,
-  PumpFunIcon,
-  TelegramIcon,
-  XIcon,
-} from "./components/icons";
+import { DexscreenerIcon, XIcon } from "./components/icons";
 
-import {
-  DEXSCREENER,
-  PUMPFUN,
-  TELEGRAM,
-  X_COMMUNITY,
-} from "./token";
+import { DEXSCREENER, PUMPFUN, X_COMMUNITY } from "./token";
 
 const SOCIALS = [
-  { name: "pump.fun", href: PUMPFUN, Icon: PumpFunIcon },
-  { name: "Dexscreener", href: DEXSCREENER, Icon: DexscreenerIcon },
+  { name: "Chart on Dexscreener", href: DEXSCREENER, Icon: DexscreenerIcon },
   { name: "X Community", href: X_COMMUNITY, Icon: XIcon },
-  { name: "Telegram", href: TELEGRAM, Icon: TelegramIcon },
 ];
 
 export default function Home() {
@@ -62,16 +50,13 @@ export default function Home() {
           <div className="min-w-0 max-[860px]:order-2">
             <span className="mb-7 inline-flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.22em] text-dream">
               <span className="h-[7px] w-[7px] rounded-full bg-dream shadow-[0_0_12px_var(--dream)]" />
-              $WEN &nbsp;·&nbsp; live on Solana
+              live on Solana
             </span>
 
             {/* w-max so the background box grows with the type — bg-clip-text
                 would otherwise crop the glyphs at the column edge. */}
             <h1 className="-ml-[0.04em] w-max bg-gradient-to-b from-starlight from-30% to-starlight/30 bg-clip-text text-[clamp(68px,11vw,170px)] font-black leading-[0.82] tracking-[-0.055em] text-transparent">
-              WEN
-              <span className="bg-gradient-to-br from-dream to-nebula bg-clip-text text-transparent">
-                ?
-              </span>
+              $WEN
             </h1>
 
             <div className="mb-8 mt-6 font-serif text-[clamp(22px,2.7vw,32px)] italic leading-[1.3]">
@@ -98,14 +83,6 @@ export default function Home() {
               >
                 Buy on pump.fun ↗
               </a>
-              <a
-                href={DEXSCREENER}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-[rgba(153,132,200,0.4)] bg-nebula/5 px-6 py-3 text-sm font-bold text-starlight transition-all hover:-translate-y-0.5 hover:bg-nebula/15"
-              >
-                See the chart
-              </a>
               <div className="flex items-center gap-1.5">
                 {SOCIALS.map(({ name, href, Icon }) => (
                   <a
@@ -125,18 +102,13 @@ export default function Home() {
           </div>
 
           <figure className="relative flex min-w-0 justify-center leading-none max-[860px]:order-1">
-            {/* Glow behind the mascot, so he reads as lit by the sky he's watching */}
-            <span
-              aria-hidden="true"
-              className="pointer-events-none absolute bottom-[10%] left-1/2 h-[60%] w-[78%] -translate-x-1/2 rounded-full bg-nebula/25 blur-[80px]"
-            />
             <Image
               src="/wen-pepe.png"
               alt="The $WEN mascot — a Pepe in Solana green and purple, gazing up at the stars in longing."
               width={1035}
               height={1187}
               priority
-              className="pepe-fade relative h-[min(58svh,540px)] w-auto max-w-full drop-shadow-[0_0_60px_rgba(20,241,149,0.12)] max-[860px]:h-[min(36svh,300px)]"
+              className="pepe-fade h-[min(58svh,540px)] w-auto max-w-full max-[860px]:h-[min(36svh,300px)]"
             />
           </figure>
         </div>

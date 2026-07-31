@@ -54,43 +54,22 @@ export function TelegramIcon({ className }: IconProps) {
 }
 
 export function DexscreenerIcon({ className }: IconProps) {
+  // Dexscreener's owl mark, drawn as a mask so it inherits currentColor
+  // and the same hover transitions as the other icons.
   return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      className={className}
+    <span
       aria-hidden="true"
-    >
-      <path d="M6 4v3" />
-      <rect x="4" y="7" width="4" height="7" rx="1" />
-      <path d="M6 14v4" />
-      <path d="M13 8v2" />
-      <rect x="11" y="10" width="4" height="6" rx="1" />
-      <path d="M13 16v2" />
-      <path d="M19 3v3" />
-      <rect x="17" y="6" width="4" height="6" rx="1" />
-      <path d="M19 12v4" />
-    </svg>
-  );
-}
-
-export function PumpFunIcon({ className }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-      aria-hidden="true"
-    >
-      <path d="M14.5 3.2 20.8 9.5a3 3 0 0 1 0 4.2l-7.1 7.1a3 3 0 0 1-4.2 0L3.2 14.5a3 3 0 0 1 0-4.2l7.1-7.1a3 3 0 0 1 4.2 0Z" />
-      <path d="M7.4 10.7 13.3 16.6" />
-    </svg>
+      className={`inline-block bg-current ${className ?? ""}`}
+      style={{
+        WebkitMaskImage: "url(/dexscreener-mark.png)",
+        maskImage: "url(/dexscreener-mark.png)",
+        WebkitMaskSize: "contain",
+        maskSize: "contain",
+        WebkitMaskRepeat: "no-repeat",
+        maskRepeat: "no-repeat",
+        WebkitMaskPosition: "center",
+        maskPosition: "center",
+      }}
+    />
   );
 }

@@ -35,21 +35,11 @@ body {
   color: var(--starlight);
 }
 
-/* The mascot art is already cut out; fade only his lower body so he rises
-   out of the dark instead of ending on a hard crop line. */
+/* The source art stops mid-torso, so fade his lower body into the dark
+   instead of ending on a hard horizontal cut. */
 .pepe-fade {
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    #000 70%,
-    rgba(0, 0, 0, 0.5) 89%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to bottom,
-    #000 70%,
-    rgba(0, 0, 0, 0.5) 89%,
-    transparent 100%
-  );
+  -webkit-mask-image: linear-gradient(to bottom, #000 72%, transparent 99%);
+  mask-image: linear-gradient(to bottom, #000 72%, transparent 99%);
 }
 
 @keyframes wish {
