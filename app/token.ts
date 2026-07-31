@@ -1,4 +1,7 @@
-export const SITE_URL = "https://wen.so";
+// The apex 308-redirects to www, and X's image fetcher won't follow redirects
+// for og:image — so metadata must name the host that serves a direct 200.
+// If Vercel is ever switched to serve the apex, change this back to wen.so.
+export const SITE_URL = "https://www.wen.so";
 
 export const CA = "DKDjfsrv2bhBQVuT7ePDZDup2KJbQwNvNPBWtNjVpump";
 
