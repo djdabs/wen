@@ -42,7 +42,7 @@ export function DexscreenerIcon({ className }: IconProps) {
   );
 }
 
-export function JupiterIcon({ className }: IconProps) {
+export function PumpFunIcon({ className }: IconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -50,11 +50,12 @@ export function JupiterIcon({ className }: IconProps) {
       stroke="currentColor"
       strokeWidth="1.8"
       strokeLinecap="round"
+      strokeLinejoin="round"
       className={className}
       aria-hidden="true"
     >
-      <circle cx="12" cy="12" r="6" />
-      <path d="M2.5 15.5c3-1 6.5-2.2 10.5-4 4-1.8 7-3.4 8.5-4.5" />
+      <path d="M14.5 3.2 20.8 9.5a3 3 0 0 1 0 4.2l-7.1 7.1a3 3 0 0 1-4.2 0L3.2 14.5a3 3 0 0 1 0-4.2l7.1-7.1a3 3 0 0 1 4.2 0Z" />
+      <path d="M7.4 10.7 13.3 16.6" />
     </svg>
   );
 }

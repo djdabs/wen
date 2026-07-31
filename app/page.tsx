@@ -3,18 +3,23 @@ import Starfield from "./components/Starfield";
 import CopyCA from "./components/CopyCA";
 import {
   DexscreenerIcon,
-  JupiterIcon,
+  PumpFunIcon,
   TelegramIcon,
   XIcon,
 } from "./components/icons";
 
-import { DEXSCREENER, JUPITER } from "./token";
+import {
+  DEXSCREENER,
+  PUMPFUN,
+  TELEGRAM,
+  X_COMMUNITY,
+} from "./token";
 
 const SOCIALS = [
+  { name: "pump.fun", href: PUMPFUN, Icon: PumpFunIcon },
   { name: "Dexscreener", href: DEXSCREENER, Icon: DexscreenerIcon },
-  { name: "X Community", href: "https://x.com", Icon: XIcon },
-  { name: "Telegram", href: "https://t.me", Icon: TelegramIcon },
-  { name: "Jupiter", href: JUPITER, Icon: JupiterIcon },
+  { name: "X Community", href: X_COMMUNITY, Icon: XIcon },
+  { name: "Telegram", href: TELEGRAM, Icon: TelegramIcon },
 ];
 
 export default function Home() {
@@ -38,7 +43,7 @@ export default function Home() {
             $WEN
           </a>
           <a
-            href={JUPITER}
+            href={PUMPFUN}
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-gradient-to-r from-dream via-[#37d2c0] to-nebula px-5 py-2 text-sm font-bold text-[#04120b] shadow-[0_0_28px_rgba(20,241,149,0.25)] transition-all hover:-translate-y-0.5 hover:shadow-[0_0_44px_rgba(20,241,149,0.4)]"
@@ -50,8 +55,8 @@ export default function Home() {
 
       {/* Hero */}
       <main className="relative z-[2] mx-auto grid min-h-svh max-w-6xl items-end px-5 pt-24 sm:px-10 max-[860px]:items-start">
-        <div className="grid grid-cols-[minmax(0,460px)_1fr] items-end gap-6 max-[860px]:grid-cols-1">
-          <div className="pb-10 md:pb-14 max-[860px]:order-2 max-[860px]:pb-8">
+        <div className="grid grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] items-center gap-x-14 gap-y-10 lg:gap-x-20 max-[860px]:grid-cols-1">
+          <div className="min-w-0 max-[860px]:order-2">
             <span className="mb-7 inline-flex items-center gap-2.5 font-mono text-xs uppercase tracking-[0.22em] text-dream">
               <span className="h-[7px] w-[7px] rounded-full bg-dream shadow-[0_0_12px_var(--dream)]" />
               $WEN &nbsp;·&nbsp; live on Solana
@@ -59,7 +64,7 @@ export default function Home() {
 
             {/* w-max so the background box grows with the type — bg-clip-text
                 would otherwise crop the glyphs at the column edge. */}
-            <h1 className="-ml-[0.04em] w-max bg-gradient-to-b from-starlight from-30% to-starlight/30 bg-clip-text text-[clamp(76px,14vw,204px)] font-black leading-[0.82] tracking-[-0.055em] text-transparent">
+            <h1 className="-ml-[0.04em] w-max bg-gradient-to-b from-starlight from-30% to-starlight/30 bg-clip-text text-[clamp(68px,11vw,170px)] font-black leading-[0.82] tracking-[-0.055em] text-transparent">
               WEN
               <span className="bg-gradient-to-br from-dream to-nebula bg-clip-text text-transparent">
                 ?
@@ -83,12 +88,12 @@ export default function Home() {
 
             <div className="mb-9 flex flex-wrap items-center gap-3.5">
               <a
-                href={JUPITER}
+                href={PUMPFUN}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-full bg-gradient-to-r from-dream via-[#37d2c0] to-nebula px-6 py-3 text-sm font-bold text-[#04120b] shadow-[0_0_28px_rgba(20,241,149,0.25)] transition-all hover:-translate-y-0.5 hover:shadow-[0_0_44px_rgba(20,241,149,0.4)]"
               >
-                Buy on Jupiter ↗
+                Buy on pump.fun ↗
               </a>
               <a
                 href={DEXSCREENER}
@@ -118,11 +123,11 @@ export default function Home() {
             <CopyCA />
           </div>
 
-          <figure className="relative flex justify-end self-end leading-none max-[860px]:order-1 max-[860px]:justify-center">
+          <figure className="relative flex min-w-0 justify-center leading-none max-[860px]:order-1">
             {/* Glow behind the mascot, so he reads as lit by the sky he's watching */}
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute bottom-[12%] left-1/2 h-[62%] w-[80%] -translate-x-1/2 rounded-full bg-nebula/25 blur-[80px]"
+              className="pointer-events-none absolute bottom-[10%] left-1/2 h-[60%] w-[78%] -translate-x-1/2 rounded-full bg-nebula/25 blur-[80px]"
             />
             <Image
               src="/wen-pepe.png"
@@ -130,7 +135,7 @@ export default function Home() {
               width={1035}
               height={1187}
               priority
-              className="pepe-fade relative h-[min(56svh,560px)] w-auto max-w-full drop-shadow-[0_0_60px_rgba(20,241,149,0.12)] max-[860px]:h-[min(36svh,300px)]"
+              className="pepe-fade relative h-[min(58svh,540px)] w-auto max-w-full drop-shadow-[0_0_60px_rgba(20,241,149,0.12)] max-[860px]:h-[min(36svh,300px)]"
             />
           </figure>
         </div>
