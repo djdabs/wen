@@ -35,6 +35,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/wen-og.png",
+        secureUrl: `${SITE_URL}/wen-og.png`,
+        type: "image/png",
         width: 1200,
         height: 630,
         alt: "$WEN — its only a matter of wen. The Pepe mascot gazing up at a field of stars.",
@@ -47,7 +49,12 @@ export const metadata: Metadata = {
     creator: X_HANDLE,
     title,
     description,
-    images: ["/wen-og.png"],
+    images: [
+      {
+        url: "/wen-og.png",
+        alt: "$WEN — its only a matter of wen. The Pepe mascot gazing up at a field of stars.",
+      },
+    ],
   },
 };
 
