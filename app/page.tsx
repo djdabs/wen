@@ -35,18 +35,21 @@ export default function Home() {
 
       {/* Nav */}
       <header className="fixed inset-x-0 top-0 z-10 border-b border-line bg-void/55 backdrop-blur-xl">
-        <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-10">
+        <nav className="mx-auto flex h-16 max-w-6xl items-center gap-4 px-5 sm:px-10">
           <a
             href="#"
-            className="bg-gradient-to-r from-dream to-nebula bg-clip-text text-xl font-black tracking-tight text-transparent"
+            className="shrink-0 bg-gradient-to-r from-dream to-nebula bg-clip-text text-xl font-black tracking-tight text-transparent"
           >
             $WEN
           </a>
+          <div className="flex min-w-0 flex-1 justify-center">
+            <CopyCA />
+          </div>
           <a
             href={PUMPFUN}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-gradient-to-r from-dream via-[#37d2c0] to-nebula px-5 py-2 text-sm font-bold text-[#04120b] shadow-[0_0_28px_rgba(20,241,149,0.25)] transition-all hover:-translate-y-0.5 hover:shadow-[0_0_44px_rgba(20,241,149,0.4)]"
+            className="shrink-0 rounded-full bg-gradient-to-r from-dream via-[#37d2c0] to-nebula px-5 py-2 text-sm font-bold text-[#04120b] shadow-[0_0_28px_rgba(20,241,149,0.25)] transition-all hover:-translate-y-0.5 hover:shadow-[0_0_44px_rgba(20,241,149,0.4)]"
           >
             Buy $WEN
           </a>
@@ -86,7 +89,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="mb-9 flex flex-wrap items-center gap-3.5">
+            <div className="flex flex-wrap items-center gap-3.5">
               <a
                 href={PUMPFUN}
                 target="_blank"
@@ -119,8 +122,6 @@ export default function Home() {
                 ))}
               </div>
             </div>
-
-            <CopyCA />
           </div>
 
           <figure className="relative flex min-w-0 justify-center leading-none max-[860px]:order-1">
