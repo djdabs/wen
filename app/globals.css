@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --void: #060312;
+  --nebula: #9945ff;
+  --dream: #14f195;
+  --starlight: #f2eeff;
+  --muted: #8b84a8;
+  --moon: #ffd98a;
+  --line: rgba(153, 132, 200, 0.16);
+}
+
+@theme inline {
+  --color-void: var(--void);
+  --color-nebula: var(--nebula);
+  --color-dream: var(--dream);
+  --color-starlight: var(--starlight);
+  --color-muted: var(--muted);
+  --color-moon: var(--moon);
+  --color-line: var(--line);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: Georgia, "Times New Roman", serif;
+}
+
+body {
+  background: var(--void);
+  color: var(--starlight);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--nebula);
+  color: var(--starlight);
+}
+
+/* The mascot art is already cut out; fade only his lower body so he rises
+   out of the dark instead of ending on a hard crop line. */
+.pepe-fade {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 70%,
+    rgba(0, 0, 0, 0.5) 89%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 70%,
+    rgba(0, 0, 0, 0.5) 89%,
+    transparent 100%
+  );
+}
+
+@keyframes wish {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 4px);
+  }
+  18% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -34px);
+  }
+}
+
+.wish-toast {
+  animation: wish 1.8s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wish-toast {
+    animation-duration: 0.01ms;
+  }
+}
